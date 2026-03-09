@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/app-...-3c4b4447">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/random" element={<RandomMode />} />
