@@ -2,6 +2,19 @@
 <html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // SPA redirect handler for GitHub Pages
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>西洋星盤復盤學習 — 福青施老師</title>
     <meta name="description" content="透過行星、星座與宮位的組合，探索生命的宇宙藍圖。" />
